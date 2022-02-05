@@ -2,6 +2,6 @@ package entities;
 
 public class Cliente {
 
-	public String name;
+	public String nome;
 	
 }
