@@ -2,9 +2,17 @@ package entities;
 
 public abstract class Conta implements IConta {
 
-	private int agencia;
-	private int numero;
-	private int saldo;
+	private static final int AGENCIA_PADRAO = 0;
+	private static int SEQUENCIAL = 1;
+	
+	protected int agencia;
+	protected int numero;
+	protected int saldo;
+
+	public Conta() {
+		this.agencia = AGENCIA_PADRAO;
+		this.numero = SEQUENCIAL++;
+	}
 
 	public int getAgencia() {
 		return agencia;
